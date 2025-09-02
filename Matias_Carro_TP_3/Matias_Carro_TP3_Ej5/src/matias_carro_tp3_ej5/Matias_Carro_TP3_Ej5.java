@@ -35,7 +35,7 @@ public class Matias_Carro_TP3_Ej5 {
         System.out.println("\n*Intentamos avanzar nuevamente*");
      nave1.avanzar(100);
      
-     //se muestra estado al final
+     //se muestra estado al fina de la navel
      nave1.mostrarEstado();
     }
     
