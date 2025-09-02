@@ -13,28 +13,22 @@ public class Mascota{
     String especie;
     int edad;
 
-    //constructor
-        public Mascota(String nombre, String especie, int edad) {
-            this.nombre = nombre;
-            this.especie = especie;
-            this.edad = edad;
-        }
-    
-
+//constructor
+public Mascota(String nombre, String especie, int edad) {
+    this.nombre = nombre;
+    this.especie = especie;
+    this.edad = edad;
+}  
  
 public void mostrarInfo(){
     System.out.println("\nDatos de la mascota:");
     System.out.println(nombre);
     System.out.println(especie);
     System.out.println(edad);
-
-
-
 }
 
 public void cumplirAnios(){
     System.out.println("Feliz cumpleaños " + nombre + "!");
     edad ++;
 }
-
 }

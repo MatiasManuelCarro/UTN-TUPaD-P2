@@ -37,8 +37,10 @@ public class Matias_Carro_TP3_Ej1 {
         System.out.println("\n Datos del estudiante:");
         estudiante1.mostrarInfo();
 
+       //Se sube la calificacion 1 punto
         estudiante1.subirCalificacion(1.0);
 
+        //Se baja la calificacion 0.5 puntos
         estudiante1.bajarCalificacion(0.5);
         
         //mostramos las nuevas calificaciones modificadas

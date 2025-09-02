@@ -16,7 +16,8 @@ public class Matias_Carro_TP3_Ej3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         
+         int año;
+         Scanner input = new Scanner(System.in);
          
         //creamos un nuevo libro
         Libro libro1 = new Libro("El cuervo","Edgar Allan Poe",1840);        
@@ -32,6 +33,5 @@ public class Matias_Carro_TP3_Ej3 {
         System.out.println("Titulo del libro: " + libro1.getTitulo() + "\nAutor: " + libro1.getAutor() + " \nAño: " +  libro1.getAñoPublicacion());
 
     }
-    
-    
+     
 }

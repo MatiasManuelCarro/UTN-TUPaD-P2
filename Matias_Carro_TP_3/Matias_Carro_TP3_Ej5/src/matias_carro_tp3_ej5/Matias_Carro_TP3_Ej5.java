@@ -29,11 +29,14 @@ public class Matias_Carro_TP3_Ej5 {
      
      //se recarga combustible para el viaje
         System.out.println("\n*Se recarga combustible*");
-     nave1.recargarCombustible(50);
+     nave1.recargarCombustible(125);
      
      //se logra avanzar
         System.out.println("\n*Intentamos avanzar nuevamente*");
      nave1.avanzar(100);
+     
+     //se muestra estado al final
+     nave1.mostrarEstado();
     }
     
 }

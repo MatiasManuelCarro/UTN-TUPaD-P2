@@ -29,8 +29,7 @@ public class Matias_Carro_TP3_Ej4 {
     //gallina 1 envejece 1 año
     gallina1.envejecer();
     
-    gallina1.mostrarEstado();
-    
+    gallina1.mostrarEstado();    
  
     //simulamos dos años de huevos puesto por la gallina 2
     for (int i = 0; i <  400; i++){

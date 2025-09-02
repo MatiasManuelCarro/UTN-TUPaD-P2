@@ -36,6 +36,7 @@ public class Libro {
     public void setAñoPublicacion(int año){
         if (año > 0 && año < 2025){
         this.añoPublicacion = año;
+            System.out.println("Año modificado correctamente");
         } else {
             System.out.println("Ingrese un año correcto.");
         }

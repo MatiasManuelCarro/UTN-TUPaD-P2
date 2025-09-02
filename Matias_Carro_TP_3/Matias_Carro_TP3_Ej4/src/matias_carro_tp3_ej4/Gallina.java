@@ -17,8 +17,7 @@ public Gallina(int idGallina, int huevosPuestos, int edad) {
  this.idGallina = idGallina;
 this.huevosPuestos = huevosPuestos;
 this.edad = edad;
-}
-   
+}   
     
 public void ponerHuevo(){
 huevosPuestos ++;    

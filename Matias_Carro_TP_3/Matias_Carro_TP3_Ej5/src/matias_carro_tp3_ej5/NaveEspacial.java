@@ -37,14 +37,23 @@ public class NaveEspacial {
         }else if (combustible > 50 && naveDespegada == true){
             System.out.println("Comenzando viaje");
             distanciaViajada += distancia;
-            
+            combustible -= distancia;
         }
     }
         
      public void recargarCombustible(int cantidad){
+         int cantidadMaximaCombustible = 250;
+         if (combustible + cantidad < cantidadMaximaCombustible){
          combustible += cantidad;
-         System.out.println("Se recargan "+cantidad+" unidades de combustible");
+         System.out.println("Se recargan "+cantidad+" unidades de combustible\nCombustible actual: "+combustible);
+     }else{
+             System.out.println("La carga supera el maximo, ingrese menos de "+ (cantidadMaximaCombustible-combustible));
+         }
      }
-
-
+     
+     public void mostrarEstado(){
+         System.out.println("\nEstadisticas del viaje de la nave: "+nombre);
+         System.out.println("distancia realizada: "+distanciaViajada);
+         System.out.println("Combustible restante: "+combustible);
+     }
 }
