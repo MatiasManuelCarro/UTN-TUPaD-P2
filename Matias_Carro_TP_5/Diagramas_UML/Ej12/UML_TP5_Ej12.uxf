@@ -1,0 +1,30 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>608</x><y>624</y><w>216</w><h>208</h></coordinates><panel_attributes>_Impuesto_
+--
+-monto: String
+-contribuyente: Contribuyente
+
+--
+Impuesto(int)
++getContribuyente(): Contribuyente
++getMonto(int): void
++setContribuyente(Contribuyente): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>968</x><y>624</y><w>168</w><h>120</h></coordinates><panel_attributes>_Contribuyente_
+--
+-nombre: String
+-cuil: String
+--
++Contribuyente(String, String)
++getNombre(): String
++setNombre(String): void
++getCuil(): String
++setCuil(String): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>248</x><y>624</y><w>224</w><h>96</h></coordinates><panel_attributes>_Calculadora_
+--
+
+
+--
++calcular(Impuesto: impuesto)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>688</y><w>160</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;call&gt;&gt;</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>824</x><y>704</y><w>160</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>180;10;10;10</additional_attributes></element></diagram>

@@ -1,0 +1,36 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>450</x><y>430</y><w>270</w><h>230</h></coordinates><panel_attributes>_FirmaDigital_
+--
+-codigoHash: String
+-fecha: String
+-usuario: Usuario
+
+--
+FirmaDigital(String, String, Usuario)
++getCodigoHash(): String
++getFecha(String): void
++getFirmaDigital(): String
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>430</y><w>210</w><h>150</h></coordinates><panel_attributes>_Documento_
+--
+-titulo: String
+-contenido: String
+--
++Motor(String, String)
++getTipo(): String
++setTipo(String): void
++getNumeroSerie(): String
++setNumeroSerie(String): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>430</y><w>280</w><h>160</h></coordinates><panel_attributes>_Usuario_
+--
+-nombre: String
+-email: String
+
+--
++Usuario(String, String)
++getNombre(): String 
++setNombre(String): void
++getEmail(): String
++setEmail(String): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>500</y><w>220</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>490</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>180;10;10;10</additional_attributes></element></diagram>

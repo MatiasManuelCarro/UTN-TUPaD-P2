@@ -1,0 +1,41 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>506</x><y>672</y><w>216</w><h>208</h></coordinates><panel_attributes>_CitaMedical_
+--
+-fecha: String
+-hora: String
+-Paciente: paciente
+-Profesional: profesional
+
+--
+CitaMedica(String , String)
++getFecha(): String
++setFecha(String): void
++getHora(): String
++setHora(String): void
++getPaciente(): Paciente
++setPaciente(String): void
++getProfesional(): profesional
++setProfesional(Profesional): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>874</x><y>672</y><w>168</w><h>120</h></coordinates><panel_attributes>_Paciente_
+--
+-nombre: String
+-obraSocial: String
+--
++Paciente(String, String)
++getNombre(): String
++setNombre(String): void
++getObraSocial(): String
++setObraSocial(String): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>146</x><y>672</y><w>224</w><h>128</h></coordinates><panel_attributes>Profesional
+--
+-nombre: String
+-especialidad: String
+
+--
++Profesional(String, String)
++getNombre(): String 
++setNombre(String): void
++getEspecialidad(): String
++setEspecialidad(String): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>362</x><y>744</y><w>160</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>10;10;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>706</x><y>744</y><w>176</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>200;10;10;10</additional_attributes></element></diagram>

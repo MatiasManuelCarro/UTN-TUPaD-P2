@@ -1,0 +1,21 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>360</x><y>441</y><w>243</w><h>189</h></coordinates><panel_attributes>_Celular_
+--
+-imei: String
+-marca: String
+-modelo: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>801</x><y>432</y><w>189</w><h>135</h></coordinates><panel_attributes>_Bateria_
+--
+-modelo: String
+-capacidad: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>441</y><w>189</w><h>135</h></coordinates><panel_attributes>_Usuario_
+--
+-nombre: String
+-dni: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>594</x><y>504</y><w>225</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1
+</panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>513</y><w>198</w><h>36</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element></diagram>

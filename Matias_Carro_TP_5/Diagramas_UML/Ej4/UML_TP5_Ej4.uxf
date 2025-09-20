@@ -1,0 +1,42 @@
+<diagram program="umletino" version="15.1"><zoom_level>3</zoom_level><element><id>UMLClass</id><coordinates><x>318</x><y>561</y><w>81</w><h>69</h></coordinates><panel_attributes>_TarjetaDeCredito_
+--
+-numero: String
+-fechaVencimiento: String
+-banco: String
+-cliente: Cliente
+-banco: Banco
+--
+TarjetaDeCredito(String, String, Banco)
++getNumero(): String
++setNumero(String): void
++getFechaVencimiento(): String
++setFechaVencimiento(String): void
++getCliente(): Cliente
++setCliente(Cliente): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>456</x><y>561</y><w>63</w><h>45</h></coordinates><panel_attributes>_Banco_
+--
+-nombre: String
+-cuit: String
+--
++Banco(String, String)
++getNombre(): String
++setNombre(String): void
++getCuit(): String
++setCuit(String): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>183</x><y>561</y><w>84</w><h>66</h></coordinates><panel_attributes>_Cliente_
+--
+-nombre: String
+-dni: String
+-tarjetaDeCredito: TarjetaDeCredito
+--
++Cliente(String, String)
++setNombre(): String 
++setNombre(String): void
++getDni(): String
++setDni(String): void
++getTarjetaDeCredito(): TarjetaDeCredito
++setTarjetaDeCredito(TarjetaDeCredito): void
++getCliente(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>264</x><y>579</y><w>60</w><h>15</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>Relation</id><coordinates><x>396</x><y>582</y><w>66</w><h>12</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element></diagram>
