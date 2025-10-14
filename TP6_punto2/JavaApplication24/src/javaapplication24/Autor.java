@@ -19,13 +19,18 @@ public class Autor {
         this.nombre = nombre;
         this.nacionalidad = nacionalidad;
     }
-    
-    
-    
+
+    public String getNombre() {
+        return nombre;
+    }
+     
+       
     public void mostarInfo(){
               System.out.println(this.toString());
         
     }
+    
+    
 
     @Override
     public String toString() {

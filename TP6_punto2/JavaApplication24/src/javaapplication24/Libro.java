@@ -24,6 +24,24 @@ public class Libro {
     public void mostrarInfo(){
         System.out.println(this.toString());
     }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public int getAnioPublicacion() {
+        return anioPublicacion;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+    
+    
     
 
     @Override
