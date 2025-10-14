@@ -35,10 +35,10 @@ public class Producto {
     public int getCantidad() {
         return cantidad;
     }
+
     
     
-    
-    
+       
 
     //public String mostrarInfo();
     public enum CategoriaProducto {
@@ -57,6 +57,6 @@ public class Producto {
         }
     }
     
-    fdsf
+   
 
 }
