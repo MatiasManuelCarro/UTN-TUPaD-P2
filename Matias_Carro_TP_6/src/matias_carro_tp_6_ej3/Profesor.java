@@ -23,6 +23,7 @@ public class Profesor {
         this.id = id;
         this.nombre = nombre;
         this.especialidad = especialidad;
+        System.out.println("Se crea el profesor: " + nombre);
     }
 
     public void agregarCurso(Curso c) {
@@ -44,7 +45,7 @@ public class Profesor {
 
     
     
-    public List listarCursos(){
+    public List<Curso>  listarCursos(){
         return cursos; //devuelve la lista de cursos del profesor
     }
     
@@ -61,6 +62,9 @@ public class Profesor {
         return nombre;
     }
     
+    public int cursosDictados(){
+        return cursos.size();
+    }
     
 
 

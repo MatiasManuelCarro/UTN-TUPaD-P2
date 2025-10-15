@@ -35,21 +35,6 @@ public class Inventario {
         return productos.size();
     }
 
-    /*
-    public Producto buscarProducto(String id) {
-        Producto productoEncontrado = null;
-        int i = 0;
-        while (i < cantidadProductos() && !this.productos.get(i).getId().equalsIgnoreCase(id)) {
-            i++;
-        }
-        if (i < cantidadProductos()) {
-            productoEncontrado = this.productos.get(i);
-        }
-        return productoEncontrado;
-
-    }
-         
-     */
     //buscar producto usando iterator
     public Producto buscarProducto(String id) {
         Producto productoEncontrado = null;
@@ -133,10 +118,13 @@ public class Inventario {
     }
 
     public void mostrarCategoriasDisp() {
-        System.out.println("Categorías disponibles:");
-        for (Producto p : productos) {
-            System.out.println("- " + p.getCategoria().name() + " (" + p.getCategoria().getDescripcion() + ")");
-        }
+        for (Producto.CategoriaProducto categoria : Producto.CategoriaProducto.values()) {
+    System.out.println("Categoria: " + categoria + "  (" + categoria.getDescripcion()+")");
+        
+        
     }
 
+    }
 }
+
+

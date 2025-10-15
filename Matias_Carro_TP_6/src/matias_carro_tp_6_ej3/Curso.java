@@ -18,15 +18,15 @@ public class Curso {
         this.codigo = codigo;
         this.nombre = nombre;
         this.profesor = profesor;
+        System.out.println("Se crea el curso: " + nombre);
     }
 
     //consutructor de curso sin profesor asignado
     public Curso(String codigo, String nombre) {
         this.codigo = codigo;
         this.nombre = nombre;
+        System.out.println("Se crea el curso: " + nombre);
     }
-    
-    
 
     public String getCodigo() {
         return codigo;
@@ -35,35 +35,28 @@ public class Curso {
     public String getNombre() {
         return nombre;
     }
-    
-    
 
     public Profesor getProfesor() {
         return profesor;
     }
 
     public void setProfesor(Profesor nuevoProfesor) {
-        if (nuevoProfesor != null && this.profesor != null){ //verifica que nuevo profesor NO sea null y si existe otro profesor
+        if (nuevoProfesor != null && this.profesor != null) { //verifica que nuevo profesor NO sea null y si existe otro profesor
             this.profesor.eliminarCurso(this); //quita el profesor
         }
         this.profesor = nuevoProfesor;
-        
+
         //nuevoProfesor != null -> verifica que no sea null el ingreso
         //&& !nuevoProfesor.listarCursos().contains(this) -> verifica que el profesor no este en la lista
-        if (nuevoProfesor != null && !nuevoProfesor.listarCursos().contains(this)){
-            System.out.println("Profesor Agregado al curso");
+        if (nuevoProfesor != null && !nuevoProfesor.listarCursos().contains(this)) {
             nuevoProfesor.agregarCurso(this); //agrega al nuevo profesor            
         }
-        
 
     }
-    
-    public void mostrarInfo(){
+
+    public void mostrarInfo() {
         System.out.println(this);
     }
-    
-    
-    
 
     @Override
     public String toString() {
