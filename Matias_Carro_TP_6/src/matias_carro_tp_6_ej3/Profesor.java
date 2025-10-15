@@ -42,13 +42,19 @@ public class Profesor {
     }
     
     public List listarCursos(){
-        return this.cursos; //devuelve la lista de cursos del profesor
+        return cursos; //devuelve la lista de cursos del profesor
     }
     
     public void mostrarInfo(){
         System.out.println(this);
         
     }
+
+    public String getId() {
+        return id;
+    }
+    
+    
 
     @Override
     public String toString() {

@@ -20,6 +20,14 @@ public class Curso {
         this.profesor = profesor;
     }
 
+    //consutructor de curso sin profesor asignado
+    public Curso(String codigo, String nombre) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+    }
+    
+    
+
     public String getCodigo() {
         return codigo;
     }
