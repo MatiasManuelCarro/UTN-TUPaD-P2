@@ -36,9 +36,15 @@ public class Producto {
         return cantidad;
     }
 
-    
-    
-       
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setCantidad(int cantidad) {
+        if (cantidad > 0) {
+            this.cantidad = cantidad;
+        }
+    }
 
     //public String mostrarInfo();
     public enum CategoriaProducto {
@@ -56,7 +62,10 @@ public class Producto {
             return descripcion;
         }
     }
-    
-   
 
+    @Override
+    public String toString() {
+        return "\nID: " + id + " | Nombre: " + nombre + " | Precio: $" + precio + " | Cantidad: " + cantidad + " | Categoría: " + categoria;
+
+    }
 }
