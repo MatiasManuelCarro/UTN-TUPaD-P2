@@ -18,6 +18,17 @@ public class Universidad {
     private List<Curso> cursos = new ArrayList<>();
     
     
+ public void agregarProfesor(Profesor p){
+     if (p != null && !profesores.contains(p)){ //si el ingreso no es nulo Y no se encuentra ya en la lista
+         profesores.add(p); //agregarlo
+     }    
+ }
+ 
+ public void agregarCurso(Curso c){
+     if (c != null && !cursos.contains(c)){
+         cursos.add(c);
+     }
+ }
 
 
 private Curso buscarCursoPorCodigo(String codigo) {
