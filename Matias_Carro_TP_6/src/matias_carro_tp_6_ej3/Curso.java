@@ -32,6 +32,12 @@ public class Curso {
         return codigo;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+    
+    
+
     public Profesor getProfesor() {
         return profesor;
     }
@@ -45,6 +51,7 @@ public class Curso {
         //nuevoProfesor != null -> verifica que no sea null el ingreso
         //&& !nuevoProfesor.listarCursos().contains(this) -> verifica que el profesor no este en la lista
         if (nuevoProfesor != null && !nuevoProfesor.listarCursos().contains(this)){
+            System.out.println("Profesor Agregado al curso");
             nuevoProfesor.agregarCurso(this); //agrega al nuevo profesor            
         }
         
@@ -60,6 +67,6 @@ public class Curso {
 
     @Override
     public String toString() {
-        return "Codigo curso: " + codigo + " | Nombre Curso: " + nombre + " | Profesor: " + profesor;
+        return "\nCodigo curso: " + codigo + " | Nombre Curso: " + nombre + " | Profesor: " + (profesor != null ? profesor : "No tiene profesor asignado");
     }
 }

@@ -21,22 +21,22 @@ public class Universidad {
     public Universidad(String nombre) {
         this.nombre = nombre;
     }
-    
-    
 
     public void agregarProfesor(Profesor p) {
         if (p != null && !profesores.contains(p)) { //si el ingreso no es nulo Y no se encuentra ya en la lista
-            profesores.add(p); //agregarlo
+            System.out.println("Profesor: " + p.getNombre() + " Agregado");
+            profesores.add(p); //lo agrega
         }
     }
 
     public void agregarCurso(Curso c) {
         if (c != null && !cursos.contains(c)) {
+            System.out.println("Curso " + c.getNombre() + " Agregado");
             cursos.add(c);
         }
     }
 
-    private Curso buscarCursoPorCodigo(String codigo) {
+    public  Curso buscarCursoPorCodigo(String codigo) {
         Curso cursoEncontrado = null;
         Iterator<Curso> it = this.cursos.iterator();
         while (it.hasNext() && cursoEncontrado == null) {
@@ -45,11 +45,10 @@ public class Universidad {
                 cursoEncontrado = c;
             }
         }
-        System.out.println("CURSO ENCONTRADO: DEBUG");
         return cursoEncontrado;
     }
 
-    private Profesor buscarProfesorPorId(String id) {
+    public Profesor buscarProfesorPorId(String id) {
         Profesor profesorEncontrado = null;
         Iterator<Profesor> it = this.profesores.iterator();
         while (it.hasNext() && profesorEncontrado == null) {
@@ -58,7 +57,6 @@ public class Universidad {
                 profesorEncontrado = p;
             }
         }
-        System.out.println("PROFESOR ENCONTRADO: DEBUG");
         return profesorEncontrado;
     }
 
@@ -66,31 +64,78 @@ public class Universidad {
         Curso busquedaCurso = buscarCursoPorCodigo(codigoCurso); //busca si existe el curso
         Profesor busquedaProfesor = buscarProfesorPorId(idProfesor); //busca si existe el profesor
         if (busquedaCurso != null && busquedaProfesor != null) { //si ambos no son null, quiere decir que existen
-            busquedaCurso.setProfesor(busquedaProfesor); //se agrega al curso, el profesor.
+            busquedaCurso.setProfesor(busquedaProfesor); //se agrega el profesro al curso
         }
     }
 
     public void listarProfesores() {
-        System.out.println(this.profesores);
+        System.out.println(profesores);
     }
-    
-    public void listarCursos(){
-        System.out.println(this.cursos);
+
+    public void listarCursos() {
+        System.out.println(cursos);
     }
-    
-     public void eliminarCurso(String codigo) {
+
+    public void eliminarCurso(String codigo) {
         Curso busquedaCurso = buscarCursoPorCodigo(codigo);
         if (busquedaCurso != null) {
             if (busquedaCurso.getProfesor() != null) {
-                busquedaCurso.setProfesor(null); // rompe vínculo
+                busquedaCurso.getProfesor().eliminarCurso(busquedaCurso);
+                busquedaCurso.setProfesor(null); // elimina al profesor ligado al curso
+                
             }
             cursos.remove(busquedaCurso);
         }
     }
-     
-  
+}
+    /*
+    public void eliminarProfesor(String id) {
+        Profesor busquedaProfesor = buscarProfesorPorId(id); //llama a la busqueda para verificar que el profesor exista
+        if (busquedaProfesor != null) { //si devuelve null, no esta en la lista
+            List<Curso> cursosEliminar = busquedaProfesor.listarCursos();
+            if (!cursosEliminar.isEmpty()) {
+                for (Curso c : cursosEliminar) {
+                    busquedaProfesor.eliminarCurso(c);
+
+                }
+
+            }
+            profesores.remove(busquedaProfesor);
+
+        }
+    }
+    
+    */
+    /*
+    public void eliminarProfesor(String id) {
+        Profesor busquedaProfesor = buscarProfesorPorId(id); //llama a la busqueda para verificar que el profesor exista
+        if (busquedaProfesor != null) { //si devuelve null, no esta en la lista
+            // Desvincular todos los cursos primero
+            for (Curso c : busquedaProfesor.listarCursos()) {
+                c.setProfesor(null);
+            }
+            // Vaciar la lista de cursos del profesor
+            busquedaProfesor.listarCursos().clear();
+
+            // Eliminar al profesor de la universidad
+            profesores.remove(busquedaProfesor);
+
+            System.out.println("Profesor eliminado: " + busquedaProfesor.getNombre());
+        } else {
+            System.out.println("No se encontró profesor con id: " + id);
+        }
+    }
+
+    public void listarProfesores() {
+        for (Profesor p : profesores) {
+            System.out.println(p);
+        }
+    }
+}
 
 }
+
+    
 
 /*
   public void asignarProfesorACurso(String codigoCurso, String idProfesor) {

@@ -34,12 +34,15 @@ public class Profesor {
         }
     }
 
+    //elimina el curso si es uno solo
     public void eliminarCurso(Curso c) {
         if (cursos.contains(c)) {
             cursos.remove(c);
             c.setProfesor(null); //elimina el profesor del curso
         }
     }
+
+    
     
     public List listarCursos(){
         return cursos; //devuelve la lista de cursos del profesor
@@ -53,12 +56,21 @@ public class Profesor {
     public String getId() {
         return id;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+    
+    
+
+
+    
     
     
 
     @Override
     public String toString() {
-        return "ID Profesor: " + id + " | Nombre: " + nombre + " | Especialidad: " + especialidad + "\nCursos dictados: " + cursos.size();
+        return "\nID Profesor: " + id + " | Nombre: " + nombre + " | Especialidad: " + especialidad + "\nCursos dictados: " + cursos.size() + "\n";
     }
 
 }
