@@ -10,8 +10,8 @@ package Matias_carro_TP7_Ej1;
  */
 public class Vehiculo {
 
-    private String marca;
-    private String modelo;
+    protected String marca;
+    protected String modelo;    
 
     public Vehiculo(String marca, String modelo) {
         this.marca = marca;
@@ -20,7 +20,7 @@ public class Vehiculo {
     }
     
     public void mostrarInfo(){
-        System.out.println("Marca Vehiculo" + this.marca + "\nModelo vehiculo" + this.modelo);
+        System.out.println(" Marca Vehiculo: " + this.marca + " | Modelo vehiculo: " + this.modelo);
     }
     
     
