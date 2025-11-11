@@ -42,14 +42,13 @@ public class Main {
      // el cliente paga con tarjteta de credito
         PagoConDescuento medioPago = new TarjetaCredito();
         double totalConDescuento = medioPago.aplicarDescuento(pedido1.calcularTotal());
-        medioPago.procesarPago(totalConDescuento);
-        
+        medioPago.procesarPago(totalConDescuento);       
         
 
 
        //El cliente paga con una billetera virtual (sin descuento)
-        Pago paypal = new BilleteraVirtual();
-        paypal.procesarPago(pedido1.calcularTotal());
+        Pago mercado = new BilleteraVirtual();
+        mercado.procesarPago(pedido1.calcularTotal());
 
        //Se cambia el estado del pedido y se notifica al cliente
         pedido1.cambiarEstado("En preparación");

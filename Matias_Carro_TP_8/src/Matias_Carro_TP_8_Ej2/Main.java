@@ -23,7 +23,7 @@ public class Main {
         division.dividir(10, 0);   //No es posible dividir por 0, da error 
 
         // 2 - Conversion cadena a numero
-        System.out.println("\n==== 1 - Cadena a Numero ====");
+        System.out.println("\n==== 2 - Cadena a Numero ====");
 
         CadenaANumero conversion = new CadenaANumero();
 
@@ -40,5 +40,23 @@ public class Main {
         lector.leer("data/archivo.txt");
         System.out.println("\n");
         lector.leer("inexistente.txt");   //Este archivo no existe
+
+        // 4 - Validador de Edad 
+        System.out.println("\n==== 4 - Validador de Edad ====");
+
+        ValidadorEdad validador = new ValidadorEdad();
+
+        validador.validar(25);
+        validador.validar(-8);
+        validador.validar(150);
+
+        // 5 - Lector con Recursos 
+        System.out.println("\n==== 5 - Lector con recursos ====");
+        LectorConRecursos read = new LectorConRecursos();
+
+        //el archivo se encuentra en la carpeta data del proyecto 
+        read.leer("data/archivo.txt");
+        read.leer("inexistente.txt");   //no existe, muestra error
+
     }
 }

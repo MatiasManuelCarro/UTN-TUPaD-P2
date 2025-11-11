@@ -8,7 +8,6 @@ package Matias_Carro_TP_8_Ej2;
  *
  * @author Matias
  */
-import java.util.Scanner;
 
 public class CadenaANumero {
     public void convertir(String texto) {

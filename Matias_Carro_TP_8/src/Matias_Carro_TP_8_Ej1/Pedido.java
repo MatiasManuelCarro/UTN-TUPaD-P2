@@ -45,7 +45,7 @@ public class Pedido implements Pagable {
 
     @Override
     public double calcularTotal() {
-        totalPedido = 0; // reiniciamos para evitar acumulación en llamadas sucesivas
+        totalPedido = 0; 
         for (Producto p : productos) {
             totalPedido += p.getPrecio();
         }
