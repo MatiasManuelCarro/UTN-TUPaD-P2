@@ -98,7 +98,7 @@ public class Main {
         //filtrar productos entre 1000 y 3000
         System.out.println("\nProductos entre $1000 y $3000: " + inventario1.filtrarProductosPorPrecio(1000.0, 3000.0));
         
-        //Categorias disponibles !!REvisar este
+        //Categorias disponibles 
         System.out.println("\n");
         inventario1.mostrarCategoriasDisp();
     }
