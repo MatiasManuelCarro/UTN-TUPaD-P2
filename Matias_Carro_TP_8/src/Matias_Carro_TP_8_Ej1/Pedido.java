@@ -10,6 +10,7 @@ import java.util.ArrayList;
  *
  * @author Matias
  */
+
 public class Pedido implements Pagable {
 
     private ArrayList<Producto> productos;
@@ -17,6 +18,8 @@ public class Pedido implements Pagable {
     private double descuento;
     private String tipoPago;
     private Cliente cliente;
+   private String estado;
+
 
     public Pedido(ArrayList<Producto> productos, double descuento, String tipoPago, Cliente cliente) {
         this.productos = productos;
@@ -34,22 +37,21 @@ public class Pedido implements Pagable {
         productos.add(producto);
     }
 
+      
+        public void cambiarEstado(String nuevoEstado) {
+        this.estado = nuevoEstado;
+        cliente.notificar("El pedido cambió de estado a: " + nuevoEstado);
+    }
+
     @Override
     public double calcularTotal() {
+        totalPedido = 0; // reiniciamos para evitar acumulación en llamadas sucesivas
         for (Producto p : productos) {
             totalPedido += p.getPrecio();
         }
         return totalPedido;
     }
-/*
-    @Override
-    public void procesarPago(double totalPedido) {
-        if (tipoPago.equals("Tarjeta")){
-            this.
-        }
 
-    }
-*/
 
     @Override
     public String toString() {
@@ -59,5 +61,4 @@ public class Pedido implements Pagable {
         }
         return resultado;
     }
-
 }

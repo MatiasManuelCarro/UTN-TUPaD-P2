@@ -10,6 +10,6 @@ package Matias_Carro_TP_8_Ej1;
  */
 public interface  Notificable {
     
-    void notificarCambioEstado(String estado);
+    void notificar(String estado);
 }
 

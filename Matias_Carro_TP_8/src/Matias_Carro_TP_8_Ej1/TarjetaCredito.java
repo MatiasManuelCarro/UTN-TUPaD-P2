@@ -17,7 +17,7 @@ public class TarjetaCredito implements Pago, PagoConDescuento {
 
     @Override
     public double aplicarDescuento(double monto) {
-        return monto * 0.9; // 10% de descuento
+        return monto * 0.9; // Es un 10% de descuento
 
     }
 

@@ -17,7 +17,9 @@ public class Cliente implements Notificable {
     }
 
     @Override
-    public void notificarCambioEstado(String estado) {
-        System.out.println("Cliente " + nombre + " fue notificado: Estado cambiado a " + estado);
+    public void notificar(String mensaje) {
+        System.out.println("Cliente " + nombre + " notificado: " + mensaje);
     }
 }
+
+

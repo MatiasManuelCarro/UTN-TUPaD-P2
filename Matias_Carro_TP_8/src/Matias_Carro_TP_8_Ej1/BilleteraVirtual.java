@@ -12,12 +12,12 @@ public class BilleteraVirtual implements Pago, PagoConDescuento {
 
        @Override
     public void procesarPago(double monto) {
-        System.out.println("Pagando con PayPal: $" + monto);
+        System.out.println("Pagando con MercadoLibre: $" + monto);
     }
 
     @Override
     public double aplicarDescuento(double monto) {
-        return monto * 0.5; // 5% de descuento
+        return monto * 0.5; // Es un 5% de descuento
     }
 
 }
